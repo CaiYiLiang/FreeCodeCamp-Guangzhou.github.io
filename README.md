@@ -20,5 +20,9 @@ Official Website of FCC-Guangzhou community
 
 通用 js 和 css 开发于 assets 目录。
 
+npm run dev
+
+npm run start
+
 ## 分支说明
 暂无
