@@ -1,0 +1,28 @@
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.w100 {
+  width:100%;
+}
+.mr5 {
+  margin-right:5px;
+}
+.mt10 {
+  margin-top:10px;
+}
+.mb30 {
+  margin-bottom:30px;
+}
+.mb10 {
+  margin-bottom:10px;
+}

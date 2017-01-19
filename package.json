@@ -1,0 +1,60 @@
+{
+  "name": "fcc-gz",
+  "version": "1.0.0",
+  "description": "Official Website of FCC-Guangzhou community",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config build/webpack.config.js",
+    "dev": "node build/dev-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreeCodeCamp-Guangzhou/FreeCodeCamp-Guangzhou.github.io.git"
+  },
+  "keywords": [
+    "fcc",
+    "FreeCodeCamp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FreeCodeCamp-Guangzhou/FreeCodeCamp-Guangzhou.github.io/issues"
+  },
+  "homepage": "https://github.com/FreeCodeCamp-Guangzhou/FreeCodeCamp-Guangzhou.github.io#readme",
+  "dependencies": {
+    "element-ui": "^1.1.2",
+    "vue": "2.1.8",
+    "vue-router": "^2.1.1",
+    "vuex": "^2.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.1.1",
+    "postcss-loader": "^1.2.1",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue-loader": "^10.0.2",
+    "vue-template-compiler": "^2.1.8",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-runtime": "^5.8.38",
+    "express": "^4.14.0",
+    "html-webpack-plugin": "^2.26.0",
+    "vue-hot-reload-api": "^2.0.7",
+    "vue-html-loader": "^1.2.3",
+    "vue-style-loader": "^1.0.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.15.0",
+    "webpack": "^1.14.0"
+  }
+}
