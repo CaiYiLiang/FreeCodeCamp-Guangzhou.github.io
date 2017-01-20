@@ -67,12 +67,12 @@
         let _index      = _thisModule['picIndex']
         let _dataList   = []
 
-        for(let i = 0; i<_length; i++) {
-          let _listItem = _thisModule['slidersList'][i] || {}
+        Array.from({length: _length}).forEach(function () {
+          let _listItem = _thisModule['slidersList'][arguments[1]] || {}
           _dataList.push(Object.assign({
             sliderPicSrc: require(`assets-images/${_catalog}ico-${_index++}.jpg`)
           }, _listItem))
-        }
+        })
         _thisModule['slidersList'] = _dataList
         this[o_key] = _thisModule
       })
