@@ -55,7 +55,7 @@
           (key !== 'graphicList') && (_newModule[key] = _thisModule[key]))
         _contentArr.map((item) => {
           item['picSrc'] = require(`assets-images/${_catalog}ico-${_index++}.jpg`)
-          this[o_key].push(Object.assign({graphicList: item}, _newModule))
+          this[o_key].push({graphicList: item, ..._newModule})
         })
       })
 
@@ -67,11 +67,9 @@
         let _index      = _thisModule['picIndex']
         let _dataList   = []
 
-        Array.from({length: _length}).forEach(function () {
-          let _listItem = _thisModule['slidersList'][arguments[1]] || {}
-          _dataList.push(Object.assign({
-            sliderPicSrc: require(`assets-images/${_catalog}ico-${_index++}.jpg`)
-          }, _listItem))
+        Array.from({length: _length}).map((...arg) => {
+          let _listItem = _thisModule['slidersList'][arg[1]] || {}
+          _dataList.push({sliderPicSrc: require(`assets-images/${_catalog}ico-${_index++}.jpg`), ..._listItem})
         })
         _thisModule['slidersList'] = _dataList
         this[o_key] = _thisModule

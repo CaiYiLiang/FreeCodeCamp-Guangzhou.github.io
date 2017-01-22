@@ -33,8 +33,8 @@
         default: false
       },
       lineSum: {
-        type: Number
-        // required: true
+        type: Number,
+        default: 1
       },
       graphicList: {
         type: Object

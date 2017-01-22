@@ -39,7 +39,7 @@ module.exports = {
       'assets-images': path.resolve(__dirname, '../src/assets/images')
     }
   },
-  babel: {presets: ['es2015', 'stage-0']},
+  babel: {presets: ['es2015', 'stage-1']},
   vue: {
     loaders: {
       js: 'babel',
