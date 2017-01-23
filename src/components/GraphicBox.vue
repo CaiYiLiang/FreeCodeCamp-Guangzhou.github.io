@@ -4,29 +4,29 @@
     :class="{'horizontal-display': horizontalStyle}">
     <div
       class="graphic-child graphic-child-pic"
-      :style="{backgroundImage: 'url(' + graphicList.picSrc + ')', width: picWidth + 'px', height: picHeight + 'px'}"></div>
+      :style="{backgroundImage: 'url(' + graphicList.picSrc + ')', width: picWidth, height: picHeight}"></div>
     <div
       class="graphic-child graphic-child-intro"
       v-if="graphicList.introContent"
-      :style="{width: introWidth + 'px', height: introHeight + 'px'}">{{ graphicList.introContent }}</div></div>
+      :style="{width: introWidth, height: introHeight}">{{ graphicList.introContent }}</div></div>
 </template>
 
 <script>
   export default {
     props: {
       picWidth: {
-        type: Number,
+        type: String,
         required: true
       },
       picHeight: {
-        type: Number,
+        type: String,
         required: true
       },
       introWidth: {
-        type: Number
+        type: String
       },
       introHeight: {
-        type: Number
+        type: String
       },
       horizontalStyle: {
         type: Boolean,

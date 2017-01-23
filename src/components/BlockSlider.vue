@@ -3,12 +3,12 @@
     <button class="arrow left-arrow" @click="moveGraphic('l')"> O </button>
     <div
       class="block-slider" 
-      :style="{width: wrapperWidth + 'px', height: wrapperHeight + 'px'}">
-      <ul class="sliders-list" :style="{transform: 'translateX(' + distance + 'px)'}">
+      :style="{width: wrapperWidth, height: wrapperHeight}">
+      <ul class="sliders-list" :style="{transform: 'translateX(' + distance + ')'}">
         <li
           class="slider-item" 
           v-for="item of slidersList"
-          :style="{backgroundImage: 'url(' + item.sliderPicSrc + ')', width: sliderWidth + 'px', height: sliderHeight + 'px', margin: sliderGap + 'px'}">{{item.sliderContent}}</li></ul></div>
+          :style="{backgroundImage: 'url(' + item.sliderPicSrc + ')', width: sliderWidth, height: sliderHeight, margin: sliderGap}">{{item.sliderContent}}</li></ul></div>
     <button class="arrow righ-arrow" @click="moveGraphic('r')"> O </button></div>
 </template>
 
@@ -78,6 +78,7 @@
     }
       .sliders-list {
         white-space: nowrap;
+        transition: transform .5s ease;
       }    
         .slider-item {
           @extend .inline-block-middle

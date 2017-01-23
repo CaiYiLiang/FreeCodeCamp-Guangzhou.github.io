@@ -1,39 +1,63 @@
 <template>
   <div id="app">
-    <!-- 技能 -->
-    <el-row class="row-bg text-center">
-      <el-col :span="24/item.lineSum" v-for="item of graphicHomeskill">
-        <graphic-box
-          class="grid-content"
-          :picWidth="item.picWidth"
-          :picHeight="item.picHeight"
-          :graphicList="item.graphicList"></graphic-box></el-col></el-row>
-    <!-- 愿景 -->
-    <el-row class="row-bg text-center">
-      <el-col :span="24/item.lineSum" v-for="item of graphicVision">
-        <graphic-box
-          class="grid-content"
-          :picWidth="item.picWidth"
-          :picHeight="item.picHeight"
-          :graphicList="item.graphicList"></graphic-box></el-col></el-row>
-    <!-- 照片墙 -->
-    <el-row class="row-bg text-center">
-      <block-slider
-        :wrapperWidth="slidersActivity.wrapperWidth"
-        :wrapperHeight="slidersActivity.wrapperHeight"
-        :sliderWidth="slidersActivity.sliderWidth"
-        :sliderHeight="slidersActivity.sliderHeight"
-        :sliderGap="slidersActivity.sliderGap"
-        :slidersList="slidersActivity.slidersList"></block-slider></el-row>
-    <!-- 贡献者 -->
-    <el-row class="row-bg text-center">
-      <el-col :span="24/item.lineSum" v-for="item of graphicContributor">
-        <graphic-box
-          class="grid-content"
-          :picWidth="item.picWidth"
-          :picHeight="item.picHeight"
-          :graphicList="item.graphicList"
-          :horizontalStyle="item.horizontalStyle"></graphic-box></el-col></el-row></div>
+    <el-row type="flex" class="row-bg" justify="center">
+      <el-col :span="12">
+        <!-- 技能 -->
+        <el-row class="row-bg text-center">
+          <el-col :span="24/item.lineSum" v-for="item of graphicHomeskill">
+            <graphic-box
+              class="grid-content"
+              :picWidth="item.picWidth"
+              :picHeight="item.picHeight"
+              :graphicList="item.graphicList"></graphic-box></el-col></el-row>
+        <!-- 愿景 -->
+        <el-row class="row-bg text-center">
+          <el-col :span="24/item.lineSum" v-for="item of graphicVision">
+            <graphic-box
+              class="grid-content"
+              :picWidth="item.picWidth"
+              :picHeight="item.picHeight"
+              :graphicList="item.graphicList"></graphic-box></el-col></el-row>
+        <el-row class="">
+          <!-- 创始人 -->
+          <el-row class="row-bg text-center">
+            <el-col :span="24/item.lineSum" v-for="item of graphicCreator">
+              <graphic-box
+                class="grid-content"
+                :picWidth="item.picWidth"
+                :picHeight="item.picHeight"
+                :introWidth="item.introWidth"
+                :introHeight="item.introHeight"          
+                :graphicList="item.graphicList"
+                :horizontalStyle="item.horizontalStyle"></graphic-box></el-col></el-row>
+          <!-- 社区图片 -->
+          <el-row class="row-bg text-center">
+            <el-col :span="24/item.lineSum" v-for="item of graphicCommunity">
+              <graphic-box
+                class="grid-content"
+                :picWidth="item.picWidth"
+                :picHeight="item.picHeight"
+                :introWidth="item.introWidth"
+                :introHeight="item.introHeight"          
+                :graphicList="item.graphicList"></graphic-box></el-col></el-row>
+          <!-- 照片轮播 00ac71-->
+          <el-row class="row-bg text-center">
+            <block-slider
+              :wrapperWidth="slidersActivity.wrapperWidth"
+              :wrapperHeight="slidersActivity.wrapperHeight"
+              :sliderWidth="slidersActivity.sliderWidth"
+              :sliderHeight="slidersActivity.sliderHeight"
+              :sliderGap="slidersActivity.sliderGap"
+              :slidersList="slidersActivity.slidersList"></block-slider></el-row></el-row>
+        <!-- 贡献者 -->
+        <el-row class="row-bg text-center">
+          <el-col :span="24/item.lineSum" v-for="item of graphicContributor">
+            <graphic-box
+              class="grid-content"
+              :picWidth="item.picWidth"
+              :picHeight="item.picHeight"
+              :graphicList="item.graphicList"
+              :horizontalStyle="item.horizontalStyle"></graphic-box></el-col></el-row></el-col></el-row></div>
 </template>
 
 <script>
@@ -54,7 +78,8 @@
         Object.keys(_thisModule).map((key) => 
           (key !== 'graphicList') && (_newModule[key] = _thisModule[key]))
         _contentArr.map((item) => {
-          item['picSrc'] = require(`assets-images/${_catalog}ico-${_index++}.jpg`)
+          try { item['picSrc'] = require(`assets-images/${_catalog}ico-${_index++}.jpg`) }
+          catch (e) { item['picSrc'] = require(`assets-images/${_catalog}ico-${--_index}.png`) }
           this[o_key].push({graphicList: item, ..._newModule})
         })
       })
@@ -85,8 +110,8 @@
           graphicHomeskill: {
             total: 8,             // 总数
             lineSum: 4,           // 一行数量
-            picWidth: 117,        // 图宽
-            picHeight: 117,       // 图高
+            picWidth: '117px',    // 图宽
+            picHeight: '117px',   // 图高
             picIndex: 1,          // 图名字编号
             catalog: 'fixed/',    // 图相对文件夹
             styleVerOrHor: false, // 横竖样式
@@ -104,8 +129,8 @@
           graphicVision: {
             total: 3,
             lineSum: 3,
-            picWidth: 180,
-            picHeight: 180,
+            picWidth: '180px',
+            picHeight: '180px',
             picIndex: 9,
             catalog: 'fixed/',
             graphicList: [
@@ -114,15 +139,40 @@
               {introContent: 'gbgd'}
             ]
           },
+          graphicCreator: {
+            total: 1,
+            picWidth: '168px',
+            picHeight: '168px',
+            picIndex: 15,
+            catalog: 'fixed/',
+            introWidth: '70%',
+            horizontalStyle: true,
+            graphicList: [
+              {introContent: 'FreeCodeCamp 是由 Quincy Larson 创办的开源社区。它致力于帮助人们利用零散时间学习编程，内容以前端和JS全栈为主。目前已经发展成为一个 50万＋开发者， 20w+Github star 的社区，通过游戏化的项目实战，来吸引大家学习编程，并在社区内给予实时的帮助，同时，为 NPO （非盈利组织）提供技术支持。'}
+            ]
+          },
+          graphicCommunity: {
+            total: 3,
+            lineSum: 3,
+            picWidth: '330px',
+            picHeight: '244px',
+            picIndex: 12,
+            catalog: 'fixed/',
+            graphicList: [
+              {introContent: '全世界的社区'},
+              {introContent: 'FreeCodeCamp广州社区组织者'},
+              {introContent: '中国的FreeCodeCamp社区'}
+            ]
+          },
           graphicContributor: {
             total: 4,
             lineSum: 2,
-            picWidth: 80,
-            picHeight: 80,
+            picWidth: '80px',
+            picHeight: '80px',
             picIndex: 1,
             catalog: 'fixed/',
-            introWidth: 80,
-            introHeight: 80,
+            introWidth: '80px',
+            introHeight: '80px',
             horizontalStyle: true,
             graphicList: [
               {introContent: '名字 26 May, 2017'},
@@ -143,8 +193,6 @@
             picIndex: 1,        // 轮播图名字编号
             catalog: 'fixed/',  // 轮播图相对文件夹
             slidersList: [      // 轮播文字或图片
-              {sliderContent: '123'},
-              {sliderContent: '123'}
             ],
           },
         }
