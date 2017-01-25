@@ -2,27 +2,22 @@
 
 Official Website of FCC-Guangzhou community
 
-## 基础技术
-
-**核心框架**：
+## 核心框架
 - Vue ^2.0
 - vue-router ^2.0
 - element-ui
 
-**通用依赖**：
-暂无
-
 ## 开发说明
 
-页面开发位于 src 目录。
+页面开发: views 
 
-组件开发于 components 目录。
+组件开发: components 
 
-通用 js 和 css 开发于 assets 目录。
+通用资源: assets
 
-npm run dev
+开发环境: npm run dev
 
-npm run start
+编译主题: node_modules/.bin/et -w -c ./src/util.css -o ./src/theme/
 
 ## 分支说明
 暂无
