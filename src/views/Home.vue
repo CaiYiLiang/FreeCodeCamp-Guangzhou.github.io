@@ -1,8 +1,30 @@
 <template>
   <div id="app">
+
+    <!-- header begin -->
+    <!-- header end -->
+
     <el-row type="flex" class="row-bg" justify="center">
       <el-col :span="12">
+        <!-- summary -->
+        <h3 class="h1 summary-title text-center primary-color-ft">在fcc平台上，你可以收获</h3>
+        <div class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</div>
+        <el-row type="flex" class="row-bg" justify="center">
+          <el-col class="text-center">
+            <div class="inli-blok"><div class="h2 strong primary-color-ft">400H</div><span>前端开发</span></div></el-col>
+          <el-col class="text-center">
+            <div class="inli-blok"><div class="h2 strong primary-color-ft">400H</div><span>数据可视化</span></div></el-col>
+          <el-col class="text-center">
+            <div class="inli-blok"><div class="h2 strong primary-color-ft">400H</div><span>后端开发</span></div></el-col>
+          <el-col class="text-center">
+            <div class="inli-blok"><div class="h2 strong primary-color-ft">800H</div><span>非盈利性项目</span></div></el-col>
+          <el-col class="text-center">
+            <div class="inli-blok"><div class="h2 strong primary-color-ft">80H</div><span>面试攻略</span></div></el-col></el-row>
         <!-- 技能 -->
+        <h4 class="text-center">你可收获的技能</h4>
         <el-row class="row-bg text-center">
           <el-col :span="24/item.lineSum" v-for="item of graphicHomeskill">
             <graphic-box
@@ -11,44 +33,68 @@
               :picHeight="item.picHeight"
               :graphicList="item.graphicList"></graphic-box></el-col></el-row>
         <!-- 愿景 -->
+        <h4 class="text-center">FreeCodeCamp的愿景</h4>
         <el-row class="row-bg text-center">
           <el-col :span="24/item.lineSum" v-for="item of graphicVision">
             <graphic-box
               class="grid-content"
               :picWidth="item.picWidth"
               :picHeight="item.picHeight"
+              :graphicList="item.graphicList"></graphic-box></el-col></el-row></el-col></el-row>
+
+    <el-row type="flex" class="row-bg primary-color-bg white-color-ft" justify="center">
+      <el-col :span="12">
+        <!-- summary -->
+        <h3 class="h1 summary-title text-center">我们的沙龙</h3>
+        <el-row class="row-bg text-center">
+          <el-col :span="24/item.lineSum" v-for="item of graphicCreator">
+            <graphic-box
+              class="grid-content"
+              :picWidth="item.picWidth"
+              :picHeight="item.picHeight"
+              :introWidth="item.introWidth"
+              :introHeight="item.introHeight"          
+              :graphicList="item.graphicList"
+              :horizontalStyle="item.horizontalStyle"></graphic-box></el-col></el-row>
+        <div class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.</div>
+        <!-- 社区图片 -->
+        <el-row class="row-bg text-center">
+          <el-col :span="24/item.lineSum" v-for="item of graphicCommunity">
+            <graphic-box
+              class="grid-content"
+              :picWidth="item.picWidth"
+              :picHeight="item.picHeight"
+              :introWidth="item.introWidth"
+              :introHeight="item.introHeight"          
               :graphicList="item.graphicList"></graphic-box></el-col></el-row>
-        <el-row class="">
-          <!-- 创始人 -->
-          <el-row class="row-bg text-center">
-            <el-col :span="24/item.lineSum" v-for="item of graphicCreator">
-              <graphic-box
-                class="grid-content"
-                :picWidth="item.picWidth"
-                :picHeight="item.picHeight"
-                :introWidth="item.introWidth"
-                :introHeight="item.introHeight"          
-                :graphicList="item.graphicList"
-                :horizontalStyle="item.horizontalStyle"></graphic-box></el-col></el-row>
-          <!-- 社区图片 -->
-          <el-row class="row-bg text-center">
-            <el-col :span="24/item.lineSum" v-for="item of graphicCommunity">
-              <graphic-box
-                class="grid-content"
-                :picWidth="item.picWidth"
-                :picHeight="item.picHeight"
-                :introWidth="item.introWidth"
-                :introHeight="item.introHeight"          
-                :graphicList="item.graphicList"></graphic-box></el-col></el-row>
-          <!-- 照片轮播 00ac71-->
-          <el-row class="row-bg text-center">
-            <block-slider
-              :wrapperWidth="slidersActivity.wrapperWidth"
-              :wrapperHeight="slidersActivity.wrapperHeight"
-              :sliderWidth="slidersActivity.sliderWidth"
-              :sliderHeight="slidersActivity.sliderHeight"
-              :sliderGap="slidersActivity.sliderGap"
-              :slidersList="slidersActivity.slidersList"></block-slider></el-row></el-row>
+        <!-- 照片轮播 -->
+        <el-row class="row-bg text-center">
+          <block-slider
+            :wrapperWidth="slidersActivity.wrapperWidth"
+            :wrapperHeight="slidersActivity.wrapperHeight"
+            :sliderWidth="slidersActivity.sliderWidth"
+            :sliderHeight="slidersActivity.sliderHeight"
+            :sliderGap="slidersActivity.sliderGap"
+            :slidersList="slidersActivity.slidersList"></block-slider></el-row></el-col></el-row>
+
+    <el-row type="flex" class="row-bg" justify="center">
+      <el-col :span="12">
+        <!-- summary -->
+        <h3 class="h1 summary-title text-center primary-color-ft">加入我们</h3>
+        <div class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        mmodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess.
+          <img src="images/ico-16.jpg" width="60%"></div>
+        
+      </el-col></el-row>
+
+
+    <!-- footer begin -->
+    <el-row type="flex" class="row-bg primary-color-bg white-color-ft" justify="center">
+      <el-col :span="12">
         <!-- 贡献者 -->
         <el-row class="row-bg text-center">
           <el-col :span="24/item.lineSum" v-for="item of graphicContributor">
@@ -57,7 +103,10 @@
               :picWidth="item.picWidth"
               :picHeight="item.picHeight"
               :graphicList="item.graphicList"
-              :horizontalStyle="item.horizontalStyle"></graphic-box></el-col></el-row></el-col></el-row></div>
+              :horizontalStyle="item.horizontalStyle"></graphic-box></el-col></el-row></el-col></el-row>
+    <!-- footer end -->
+
+  </div>
 </template>
 
 <script>
@@ -155,7 +204,7 @@
             total: 3,
             lineSum: 3,
             picWidth: '330px',
-            picHeight: '244px',
+            picHeight: '167px',
             picIndex: 12,
             catalog: 'fixed/',
             graphicList: [
@@ -201,8 +250,61 @@
   }
 </script>
 
-<style>
+<style lang="sass">
+  * {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  }
+  html, body {
+    margin: 0
+  }
+  .h1 {
+    font-size: 1.8rem;
+  }
+  .h2 {
+    font-size: 1.6rem;
+  }
+  .inli-blok {
+    display: inline-block;
+    vertical-align: top;
+  }
   .text-center {
     text-align: center;
+  }
+  .strong {
+    font-weight: bold;
+  }
+  .primary-color-bg {
+    background-color: #00ac71;
+  }
+  .primary-color-ft {
+    color: #00ac71;
+  }
+  .white-color-ft * {
+    color: #fff;
+  }
+
+  .summary-title {
+    position: relative;
+    padding-bottom: .6em;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 260px;
+      margin-left: -130px;
+      border-bottom: 1px solid;
+      opacity: .3;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 60px;
+      margin-left: -30px;
+      border: 1px solid;
+      opacity: .6;
+    }
   }
 </style>

@@ -17,7 +17,7 @@ Official Website of FCC-Guangzhou community
 
 开发环境: npm run dev
 
-编译主题: node_modules/.bin/et -w -c ./src/util.css -o ./src/theme/
+(编译主题: node_modules/.bin/et -w -c ./src/util.css -o ./src/theme/)
 
 ## 分支说明
 暂无
