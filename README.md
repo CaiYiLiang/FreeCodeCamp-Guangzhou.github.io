@@ -26,10 +26,6 @@ Official Website of FCC-Guangzhou community
 
 - Home.vue
 
-- [ ]
-
-- [ x ]
-
 - [ ] navigation块 [aki]
 
 - [ ] header块 [taikyo]
