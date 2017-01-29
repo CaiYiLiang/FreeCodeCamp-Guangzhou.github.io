@@ -21,3 +21,30 @@ Official Website of FCC-Guangzhou community
 
 ## 分支说明
 暂无
+
+## TODOLIST
+
+- Home.vue
+
+navigation块 [aki]
+
+header块 [taikyo]
+
+slider块 [aki]
+
+footer块 [aki]
+
+css调整 [cherry]
+
+html内容替换 [cherry]
+
+- Wall.vue
+
+设计 [阿彬]
+
+开发 [settimeout]
+
+## 新组件开发/组件优化[开issue提]
+
+- BlockSlider.vue [aki]
+- GraphicBox.vue [aki]
