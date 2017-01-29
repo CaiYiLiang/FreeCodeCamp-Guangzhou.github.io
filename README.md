@@ -26,25 +26,29 @@ Official Website of FCC-Guangzhou community
 
 - Home.vue
 
-navigation块 [aki]
+- [ ]
 
-header块 [taikyo]
+- [ x ]
 
-slider块 [aki]
+- [ ] navigation块 [aki]
 
-footer块 [aki]
+- [ ] header块 [taikyo]
 
-css调整 [cherry]
+- [ ] slider块 [aki]
 
-html内容替换 [cherry]
+- [ ] footer块 [aki]
+
+- [ ] css调整 [cherry]
+
+- [ ] html内容替换 [cherry]
 
 - Wall.vue
 
-设计 [阿彬]
+- [ ] 设计 [阿彬]
 
-开发 [settimeout]
+- [ ] 开发 [settimeout]
 
 ## 新组件开发/组件优化[开issue提]
 
-- BlockSlider.vue [aki]
-- GraphicBox.vue [aki]
+- [ ] BlockSlider.vue [aki]
+- [ ] GraphicBox.vue [aki]
