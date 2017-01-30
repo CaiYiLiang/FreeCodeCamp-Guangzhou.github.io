@@ -2,45 +2,32 @@
 
 Official Website of FCC-Guangzhou community
 
-## 核心框架
+## Core Framework
 
 - Vue ^2.0
 - vue-router ^2.0
 - element-ui
 
-## 开发说明
+## Develop Tips
 
-页面开发: views 
+what | where/how
+---- | ---
+**views** | ./src/views
+**components** | ./src/components
+**common resources** | ./src/assets
+**dev environment** | npm run dev
 
-组件开发: components 
+## Todo List
 
-通用资源: assets
-
-开发环境: npm run dev
-
-## TODOLIST
-
-- Home.vue
-
-- [ ] slider块 [aki]
-- [ ] footer块 [aki]
-- [ ] header块 [taikyo]
-- [ ] css调整 [cherry]
-- [ ] html内容替换 [cherry]
-- [ ] transition过渡 [aki]
-
-- Wall.vue
-
-- [ ] 设计 [阿彬]
-- [ ] 开发 [settimeout]
-
-- Share.vue
-
-- [ ] 设计 [阿彬]
-- [ ] 开发 [settimeout]
-
-## 新组件开发/组件优化[开issue提]
-
-- [ ] BlockSlider.vue [aki]
-- [ ] GraphicBox.vue [aki]
-- [ ] Navigation.vue [aki]
+where |what | who
+--- | ---- | ---
+Home.vue | slider块 | Aki
+Home.vue | footer块 | Aki
+Home.vue | header块 | Taikyo
+Home.vue | css调整 | Cherry
+Home.vue | html内容替换 | Cherry
+Home.vue | transition过渡 | Aki
+Wall.vue | 设计 | 阿彬
+Wall.vue | 开发 | setTimeout
+Share.vue | 设计 | 阿彬
+Share.vue | 开发 | setTimeout
