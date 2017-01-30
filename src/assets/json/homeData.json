@@ -1,0 +1,129 @@
+{
+  "graphicData": {
+    "graphicHomeskill": {
+      "total": 8,
+      "lineSum": 4,
+      "picWidth": "117px",
+      "picHeight": "117px",
+      "picIndex": 1,
+      "catalog": "fixed/",
+      "styleVerOrHor": false,
+      "graphicList": [
+        {
+          "introContent": "HTML5"
+        },
+        {
+          "introContent": "CSS3"
+        },
+        {
+          "introContent": "JavaScript"
+        },
+        {
+          "introContent": "Databases"
+        },
+        {
+          "introContent": "Git & GitHub"
+        },
+        {
+          "introContent": "Node.js"
+        },
+        {
+          "introContent": "React.js"
+        },
+        {
+          "introContent": "D3.js"
+        }
+      ]
+    },
+    "graphicVision": {
+      "total": 3,
+      "lineSum": 3,
+      "picWidth": "180px",
+      "picHeight": "180px",
+      "picIndex": 9,
+      "catalog": "fixed/",
+      "graphicList": [
+        {
+          "introContent": "1234"
+        },
+        {
+          "introContent": "5678"
+        },
+        {
+          "introContent": "gbgd"
+        }
+      ]
+    },
+    "graphicCreator": {
+      "total": 1,
+      "picWidth": "168px",
+      "picHeight": "168px",
+      "picIndex": 15,
+      "catalog": "fixed/",
+      "introWidth": "70%",
+      "horizontalStyle": true,
+      "graphicList": [
+        {
+          "introContent": "FreeCodeCamp 是由 Quincy Larson 创办的开源社区。它致力于帮助人们利用零散时间学习编程，内容以前端和JS全栈为主。目前已经发展成为一个 50万＋开发者， 20w+Github star 的社区，通过游戏化的项目实战，来吸引大家学习编程，并在社区内给予实时的帮助，同时，为 NPO （非盈利组织）提供技术支持。"
+        }
+      ]
+    },
+    "graphicCommunity": {
+      "total": 3,
+      "lineSum": 3,
+      "picWidth": "330px",
+      "picHeight": "167px",
+      "picIndex": 12,
+      "catalog": "fixed/",
+      "graphicList": [
+        {
+          "introContent": "全世界的社区"
+        },
+        {
+          "introContent": "FreeCodeCamp广州社区组织者"
+        },
+        {
+          "introContent": "中国的FreeCodeCamp社区"
+        }
+      ]
+    },
+    "graphicContributor": {
+      "total": 4,
+      "lineSum": 2,
+      "picWidth": "80px",
+      "picHeight": "80px",
+      "picIndex": 1,
+      "catalog": "fixed/",
+      "introWidth": "80px",
+      "introHeight": "80px",
+      "horizontalStyle": true,
+      "graphicList": [
+        {
+          "introContent": "名字 26 May, 2017"
+        },
+        {
+          "introContent": "名字 26 May, 2017"
+        },
+        {
+          "introContent": "名字 26 May, 2017"
+        },
+        {
+          "introContent": "名字 26 May, 2017"
+        }
+      ]
+    }
+  },
+  "slidersData": {
+    "slidersActivity": {
+      "total": 8,
+      "wrapperWidth": 400,
+      "wrapperHeight": 160,
+      "sliderWidth": 150,
+      "sliderHeight": 150,
+      "sliderGap": 5,
+      "picIndex": 1,
+      "catalog": "fixed/",
+      "slidersList": []
+    }
+  }
+}

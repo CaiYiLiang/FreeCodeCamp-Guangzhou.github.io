@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
-
+  <div>
     <!-- header begin -->
+    <div class="box" style="background-color: #ff5;height: 468px;padding: 200px; text-align: center">我是一个头部</div>
     <!-- header end -->
 
-    <el-row type="flex" class="row-bg" justify="center">
+    <el-row type="flex" class="box row-bg" justify="center" id="about">
       <el-col :span="12">
         <!-- summary -->
         <h3 class="h1 summary-title text-center primary-color-ft">在fcc平台上，你可以收获</h3>
@@ -42,7 +42,7 @@
               :picHeight="item.picHeight"
               :graphicList="item.graphicList"></graphic-box></el-col></el-row></el-col></el-row>
 
-    <el-row type="flex" class="row-bg primary-color-bg white-color-ft" justify="center">
+    <el-row type="flex" class="box row-bg primary-color-bg white-color-ft" justify="center">
       <el-col :span="12">
         <!-- summary -->
         <h3 class="h1 summary-title text-center">我们的沙龙</h3>
@@ -80,7 +80,7 @@
             :sliderGap="slidersActivity.sliderGap"
             :slidersList="slidersActivity.slidersList"></block-slider></el-row></el-col></el-row>
 
-    <el-row type="flex" class="row-bg" justify="center">
+    <el-row type="flex" class="box row-bg" justify="center" id="join">
       <el-col :span="12">
         <!-- summary -->
         <h3 class="h1 summary-title text-center primary-color-ft">加入我们</h3>
@@ -90,7 +90,6 @@
           <img src="images/ico-16.jpg" width="60%"></div>
         
       </el-col></el-row>
-
 
     <!-- footer begin -->
     <el-row type="flex" class="row-bg primary-color-bg white-color-ft" justify="center">
@@ -112,6 +111,7 @@
 <script>
   import GraphicBox from '../components/GraphicBox'
   import BlockSlider from '../components/BlockSlider'
+  import HomeData from '../assets/json/HomeData.json'
 
   export default {
     created: function () {
@@ -153,99 +153,8 @@
       GraphicBox,
       BlockSlider
     },
-    data () {
-      return {
-        graphicData: {
-          graphicHomeskill: {
-            total: 8,             // 总数
-            lineSum: 4,           // 一行数量
-            picWidth: '117px',    // 图宽
-            picHeight: '117px',   // 图高
-            picIndex: 1,          // 图名字编号
-            catalog: 'fixed/',    // 图相对文件夹
-            styleVerOrHor: false, // 横竖样式
-            graphicList: [        // 图文内容
-              {introContent: 'HTML5'},
-              {introContent: 'CSS3'},
-              {introContent: 'JavaScript'},
-              {introContent: 'Databases'},
-              {introContent: 'Git & GitHub'},
-              {introContent: 'Node.js'},
-              {introContent: 'React.js'},
-              {introContent: 'D3.js'}
-            ]
-          },
-          graphicVision: {
-            total: 3,
-            lineSum: 3,
-            picWidth: '180px',
-            picHeight: '180px',
-            picIndex: 9,
-            catalog: 'fixed/',
-            graphicList: [
-              {introContent: '1234'},
-              {introContent: '5678'},
-              {introContent: 'gbgd'}
-            ]
-          },
-          graphicCreator: {
-            total: 1,
-            picWidth: '168px',
-            picHeight: '168px',
-            picIndex: 15,
-            catalog: 'fixed/',
-            introWidth: '70%',
-            horizontalStyle: true,
-            graphicList: [
-              {introContent: 'FreeCodeCamp 是由 Quincy Larson 创办的开源社区。它致力于帮助人们利用零散时间学习编程，内容以前端和JS全栈为主。目前已经发展成为一个 50万＋开发者， 20w+Github star 的社区，通过游戏化的项目实战，来吸引大家学习编程，并在社区内给予实时的帮助，同时，为 NPO （非盈利组织）提供技术支持。'}
-            ]
-          },
-          graphicCommunity: {
-            total: 3,
-            lineSum: 3,
-            picWidth: '330px',
-            picHeight: '167px',
-            picIndex: 12,
-            catalog: 'fixed/',
-            graphicList: [
-              {introContent: '全世界的社区'},
-              {introContent: 'FreeCodeCamp广州社区组织者'},
-              {introContent: '中国的FreeCodeCamp社区'}
-            ]
-          },
-          graphicContributor: {
-            total: 4,
-            lineSum: 2,
-            picWidth: '80px',
-            picHeight: '80px',
-            picIndex: 1,
-            catalog: 'fixed/',
-            introWidth: '80px',
-            introHeight: '80px',
-            horizontalStyle: true,
-            graphicList: [
-              {introContent: '名字 26 May, 2017'},
-              {introContent: '名字 26 May, 2017'},
-              {introContent: '名字 26 May, 2017'},
-              {introContent: '名字 26 May, 2017'}
-            ]
-          }
-        },
-        slidersData: {
-          slidersActivity: {
-            total: 8,           // 总数
-            wrapperWidth: 400,  // 包裹层宽
-            wrapperHeight: 160, // 包裹层高
-            sliderWidth: 150,   // 轮播item宽
-            sliderHeight: 150,  // 轮播item高
-            sliderGap: 5,       // 轮播item内填充
-            picIndex: 1,        // 轮播图名字编号
-            catalog: 'fixed/',  // 轮播图相对文件夹
-            slidersList: [      // 轮播文字或图片
-            ],
-          },
-        }
-      }
+    data: function () {
+      return HomeData
     }
   }
 </script>
@@ -253,9 +162,18 @@
 <style lang="sass">
   * {
     font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    box-sizing: border-box;
   }
   html, body {
     margin: 0
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
   }
   .h1 {
     font-size: 1.8rem;
@@ -283,6 +201,9 @@
     color: #fff;
   }
 
+  .box {
+    padding: 50px 0;
+  }
   .summary-title {
     position: relative;
     padding-bottom: .6em;
