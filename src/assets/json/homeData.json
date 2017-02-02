@@ -77,13 +77,13 @@
       "catalog": "fixed/",
       "graphicList": [
         {
-          "introContent": "全世界的社区"
+          "introContent": "▲ 全世界的社区"
         },
         {
-          "introContent": "FreeCodeCamp广州社区组织者"
+          "introContent": "▲ FreeCodeCamp广州社区组织者"
         },
         {
-          "introContent": "中国的FreeCodeCamp社区"
+          "introContent": "▲ 中国的FreeCodeCamp社区"
         }
       ]
     },
@@ -115,14 +115,14 @@
   },
   "slidersData": {
     "slidersActivity": {
-      "total": 8,
-      "wrapperWidth": 400,
-      "wrapperHeight": 160,
-      "sliderWidth": 150,
-      "sliderHeight": 150,
-      "sliderGap": 5,
+      "total": 6,
+      "wrapperWidth": "690px",
+      "wrapperHeight": "150px",
+      "sliderWidth": "220px",
+      "sliderHeight": "150px",
+      "sliderGap": "11px",
       "picIndex": 1,
-      "catalog": "fixed/",
+      "catalog": "20161217/",
       "slidersList": []
     }
   }

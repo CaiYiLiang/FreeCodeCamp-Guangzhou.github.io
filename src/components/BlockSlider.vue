@@ -1,6 +1,6 @@
 <template>
   <div class="block-slider-container">
-    <button class="arrow left-arrow" @click="moveGraphic('l')"> O </button>
+    <span class="arrow left-arrow strong white-color-bg primary-color-ft" @click="moveGraphic('l')"> < </span>
     <div
       class="block-slider" 
       :style="{width: wrapperWidth, height: wrapperHeight}">
@@ -8,30 +8,34 @@
         <li
           class="slider-item" 
           v-for="item of slidersList"
-          :style="{backgroundImage: 'url(' + item.sliderPicSrc + ')', width: sliderWidth, height: sliderHeight, margin: sliderGap}">{{item.sliderContent}}</li></ul></div>
-    <button class="arrow righ-arrow" @click="moveGraphic('r')"> O </button></div>
+          :style="{backgroundImage: 'url(' + item.sliderPicSrc + ')', width: sliderWidth, height: sliderHeight, marginRight: sliderGap}">{{item.sliderContent}}</li></ul></div>
+    <span class="arrow righ-arrow strong white-color-bg primary-color-ft" @click="moveGraphic('r')"> > </span></div>
 </template>
 
 <script>
   export default {
     props: {
+      total: {
+        type: Number,
+        required: true
+      },
       slidersList: {
         type: Array
       },
       wrapperWidth: {
-        type: Number
+        type: String
       },
       wrapperHeight: {
-        type: Number
+        type: String
       },
       sliderWidth: {
-        type: Number
+        type: String
       },
       sliderHeight: {
-        type: Number
+        type: String
       },
       sliderGap: {
-        type: Number
+        type: String
       }
     },
     data: function () {
@@ -41,19 +45,22 @@
     },
     methods: {
       moveGraphic: function (dir) {
-        let sliderLen       = this.slidersList.length
-        let sliderWidth     = this.sliderWidth + 2 * this.sliderGap
+        let sliderLen       = this.total
+        let sliderWidth     = parseInt(this.sliderWidth) + parseInt(this.sliderGap)
         let sliderListWidth = sliderLen * sliderWidth
+        let wrapperWidth    = parseInt(this.wrapperWidth)
+        let distance        = parseInt(this.distance)
+
         if (dir === 'l') {
-          this.distance -= sliderWidth;
-          (this.distance < this.wrapperWidth - sliderListWidth) &&
-          (this.distance = this.wrapperWidth - sliderListWidth)
+          distance += sliderWidth;
+          (distance > 0) && (distance = 0)
+          this.distance = distance + 'px'
           return
         }
         if (dir === 'r') {
-          this.distance += sliderWidth;
-          (this.distance > 0) &&
-          (this.distance = 0)
+          distance -= sliderWidth;
+          (distance < wrapperWidth - sliderListWidth) && (distance = wrapperWidth - sliderListWidth)
+          this.distance = distance + 'px'
           return
         }
       }
@@ -62,6 +69,19 @@
 </script>
 
 <style lang="sass" scoped>
+  .strong {
+    font-weight: bold;
+  }
+  .primary-color-bg {
+    background-color: #00ac71;
+  }
+  .primary-color-ft {
+    color: #00ac71;
+  }
+  .white-color-bg {
+    background-color: #fff;
+  }
+
   .inline-block-middle {
     box-sizing: border-box;
     display: inline-block;
@@ -73,8 +93,9 @@
     }
   }
     .block-slider {
+      position: relative;
+      max-width: 100%;
       overflow: hidden;
-      border: 1px solid;
     }
       .sliders-list {
         white-space: nowrap;
@@ -83,4 +104,20 @@
         .slider-item {
           @extend .inline-block-middle
         }
+  .arrow {
+    height: 30px;
+    margin: 0 6px;
+    padding: 6px 4px;
+  }
+  .left-arrow, .righ-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+  }
+  .left-arrow {
+    right: 100%;
+  }
+  .righ-arrow {
+    left: 100%;
+  }
 </style>

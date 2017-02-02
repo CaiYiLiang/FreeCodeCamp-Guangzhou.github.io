@@ -73,6 +73,7 @@
         <!-- 照片轮播 -->
         <el-row class="row-bg text-center">
           <block-slider
+            :total="slidersActivity.total"
             :wrapperWidth="slidersActivity.wrapperWidth"
             :wrapperHeight="slidersActivity.wrapperHeight"
             :sliderWidth="slidersActivity.sliderWidth"
@@ -143,7 +144,7 @@
 
         Array.from({length: _length}).map((...arg) => {
           let _listItem = _thisModule['slidersList'][arg[1]] || {}
-          _dataList.push({sliderPicSrc: require(`assets-images/${_catalog}ico-${_index++}.jpg`), ..._listItem})
+          _dataList.push({sliderPicSrc: require(`assets-images/${_catalog}pic-${_index++}.jpg`), ..._listItem})
         })
         _thisModule['slidersList'] = _dataList
         this[o_key] = _thisModule
