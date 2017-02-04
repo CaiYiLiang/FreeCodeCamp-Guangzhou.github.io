@@ -21,10 +21,6 @@ what | where/how
 
 where |what | who
 --- | ---- | ---
-Home.vue | footer块 | Aki
-Home.vue | header块 | Taikyo
-Home.vue | html内容替换 | Cherry
-Home.vue | css调整 | Cherry
 Home.vue | 优化 | Aki
 Wall.vue | 设计 | 阿彬
 Wall.vue | 开发 | setTimeout
