@@ -86,31 +86,6 @@
           "introContent": "▲ 中国的FreeCodeCamp社区"
         }
       ]
-    },
-    "graphicContributor": {
-      "total": 4,
-      "lineSum": 2,
-      "picWidth": "80px",
-      "picHeight": "80px",
-      "picIndex": 1,
-      "catalog": "fixed/",
-      "introWidth": "80px",
-      "introHeight": "80px",
-      "horizontalStyle": true,
-      "graphicList": [
-        {
-          "introContent": "名字 26 May, 2017"
-        },
-        {
-          "introContent": "名字 26 May, 2017"
-        },
-        {
-          "introContent": "名字 26 May, 2017"
-        },
-        {
-          "introContent": "名字 26 May, 2017"
-        }
-      ]
     }
   },
   "slidersData": {

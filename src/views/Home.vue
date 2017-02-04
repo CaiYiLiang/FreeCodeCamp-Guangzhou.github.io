@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- header begin -->
-    <div class="box" style="background-color: #ff5;height: 468px;padding: 200px; text-align: center">我是一个头部</div>
+    <div class="box header"></div>
     <!-- header end -->
 
     <el-row type="flex" class="box row-bg" justify="center" id="about">
@@ -95,15 +95,18 @@
     <!-- footer begin -->
     <el-row type="flex" class="row-bg primary-color-bg white-color-ft" justify="center">
       <el-col :span="12">
-        <!-- 贡献者 -->
-        <el-row class="row-bg text-center">
-          <el-col :span="24/item.lineSum" v-for="item of graphicContributor">
-            <graphic-box
-              class="grid-content"
-              :picWidth="item.picWidth"
-              :picHeight="item.picHeight"
-              :graphicList="item.graphicList"
-              :horizontalStyle="item.horizontalStyle"></graphic-box></el-col></el-row></el-col></el-row>
+        <h4>Links</h4>
+        <ul class="links">
+          <li class="link-item"><a href="https://github.com/FreeCodeCamp-Guangzhou" target="_blank">友情链接友情链接链接</a></li>
+          <li class="link-item"><a href="https://github.com/FreeCodeCamp-Guangzhou" target="_blank">友情链接友链接链接</a></li>
+          <li class="link-item"><a href="https://github.com/FreeCodeCamp-Guangzhou" target="_blank">友情链接友情链接链接</a></li>
+          <li class="link-item"><a href="https://github.com/FreeCodeCamp-Guangzhou" target="_blank">友情链接链接链接</a></li>
+          <li class="link-item"><a href="https://github.com/FreeCodeCamp-Guangzhou" target="_blank">友情链接友情链链接</a></li>
+          <li class="link-item"><a href="https://github.com/FreeCodeCamp-Guangzhou" target="_blank">友情链接友情链接链接</a></li>
+          <li class="link-item"><a href="https://github.com/FreeCodeCamp-Guangzhou" target="_blank">友情链接友情链接</a></li>
+          <li class="link-item"><a href="https://github.com/FreeCodeCamp-Guangzhou" target="_blank">友情链接友情链接链接</a></li>
+        </ul>
+        </el-col></el-row>
     <!-- footer end -->
 
   </div>
@@ -227,6 +230,23 @@
       margin-left: -30px;
       border: 1px solid;
       opacity: .6;
+    }
+  }
+
+  .header {
+    height: 468px;
+    padding: 200px;
+    background: url("../assets/images/fixed/header.jpg") left top/cover;
+    text-align: center;
+  }
+  .links {
+    padding-bottom: 2rem;
+    .link-item {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.4;
+      font-size: 1rem;
+      padding: .2em .5em;
     }
   }
 </style>
